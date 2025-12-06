@@ -4,6 +4,8 @@ The idea is simple: a system that detects if a room is occupied or not as well a
 This system can be used in the Bahara rooms. These rooms have no windows and there is no ptracical way of checking if the room is in use without acutally opening the doors.
 Hence, the secuirty working in our campus has to periodically check if there are any people in the room, as well as possible accidents. 
 Using this system can provide people with these unknown information.
+
+
 Link to p5js: https://editor.p5js.org/yj2082/full/CUheQmfX3
 Link to Arduino: https://github.com/yongjejeon/Detection-Ardunio-p5js
 
