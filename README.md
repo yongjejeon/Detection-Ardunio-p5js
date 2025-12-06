@@ -21,11 +21,12 @@ If there is a detection, there are 3 cases: Idle, S1 active and S2 active. If it
 It checks and sends to either S1 active or S2 active cases. In either of the cases, it does sometime similar, it checks if the other sensor is met before the time out, 
 if its not then its idle. If it meets, than it means that its confirmed to be either In or out.
 
-/arming logic
+<!-- wp:code -->
+<pre class="wp-block-code"><code>/arming logic
       if (s1 || s2) {             //either the sensor sees somethings
         lastNotClearTime = now;
       } else {                //if both are clear meaning enought time since delay has passed
-        if (!armed && (now - lastNotClearTime > CLEAR_DELAY)) {
+        if (!armed &amp;&amp; (now - lastNotClearTime > CLEAR_DELAY)) {
           armed = true;
         }
       }
@@ -34,10 +35,10 @@ if its not then its idle. If it meets, than it means that its confirmed to be ei
 
         case IDLE:  //only if armed is true, it reacts. 
           if (armed) {
-            if (s1 && !s2) { //sensor 1 sees but sensor 2 does not
+            if (s1 &amp;&amp; !s2) { //sensor 1 sees but sensor 2 does not
               state = S1_ACTIVE;    //potential IN
               stateStart = now;
-            } else if (s2 && !s1) { //other case
+            } else if (s2 &amp;&amp; !s1) { //other case
               state = S2_ACTIVE;    //potential OUT
               stateStart = now;
             }
@@ -48,7 +49,7 @@ if its not then its idle. If it meets, than it means that its confirmed to be ei
           if (s2) {       //if we see s2 before time out,
             // Sequence: S1 then S2 -> IN
             peopleCount++;
-            if (peopleCount < 0) peopleCount = 0;
+            if (peopleCount &lt; 0) peopleCount = 0;
             updateRing();
             lastEvent = 1;   // IN
             armed = false;
@@ -62,7 +63,7 @@ if its not then its idle. If it meets, than it means that its confirmed to be ei
         case S2_ACTIVE:
           if (s1) { //same idea for sensor 2
             peopleCount--;
-            if (peopleCount < 0) peopleCount = 0;
+            if (peopleCount &lt; 0) peopleCount = 0;
             updateRing();
             lastEvent = -1;  // OUT
             armed = false;
@@ -72,26 +73,28 @@ if its not then its idle. If it meets, than it means that its confirmed to be ei
             state = IDLE;
           }
           break;
-      }
+      }</code></pre>
+<!-- /wp:code -->
 
 The neo pixel ring on the other hand provides one simple information: if the room is occupied or not. If there is no one in the room, 
 meaning the count is 0, then it displays green. If there is atleast one person in the room, then it displays red.
 
-//updating led based on count if room is occupied its red if not its green
+<!-- wp:code -->
+<pre class="wp-block-code"><code>//updating led based on count if room is occupied its red if not its green
 void updateRing() {
   ring.clear();
   if (peopleCount > 0) {
-    for (int i = 0; i < NUM_LEDS; i++) {
+    for (int i = 0; i &lt; NUM_LEDS; i++) {
       ring.setPixelColor(i, ring.Color(150, 0, 0));
     }
   } else {
-    for (int i = 0; i < NUM_LEDS; i++) {
+    for (int i = 0; i &lt; NUM_LEDS; i++) {
       ring.setPixelColor(i, ring.Color(0, 150, 0));
     }
   }
   ring.show();
-}
-
+}</code></pre>
+<!-- /wp:code -->
 Arduino sends 2 information: the number of people and if its IN or OUT.
 
       Serial.print(peopleCount);
