@@ -1,4 +1,5 @@
 **Reflection**
+
 Inspired from parking lot detection system, my project is a small re-creation of that as well as a mix of some fun elements to entertain users. 
 The idea is simple: a system that detects if a room is occupied or not as well as a way of showing the number of people in the room. 
 This system can be used in the Bahara rooms. These rooms have no windows and there is no ptracical way of checking if the room is in use without acutally opening the doors.
@@ -10,6 +11,7 @@ Link to p5js: https://editor.p5js.org/yj2082/full/CUheQmfX3
 Link to Arduino: https://github.com/yongjejeon/Detection-Ardunio-p5js
 
 **How this was made(Arduino Explanation)**
+
 This system uses 2 Infrared distance sensors and 1 neo pixel ring. 
 The 2 distance sensors are placed side by side to check if the person either entered the room or exited the room. If sensor 1 detects first before sensor 2, 
 then it means that the person entered the room and vice versa. There is more logic in double checking if the detection is really true or not. For example, 
@@ -185,6 +187,7 @@ Since these sensors were not from the  ardunio kit, I had to solder wires to the
 Thankfully, I was able to get used to soldering towards the end.
 
 **Usage of AI**
+
 I received help from AI when displaying the memes. 
 
 function showGifForCount(count) {
@@ -200,6 +203,7 @@ function showGifForCount(count) {
 The memes were not made by me. They were all saved from a website called tenor.com.
 
 **Future Improvement**
+
 One major improvement is the cable management. In the current prototype, the wiring between the sensors, microcontroller, 
 and LED ring is exposed, which makes the setup look unfinished and less polished. A future version could incorporate a more 
 integrated system and internal routing channels to hide the wires and create a cleaner presentation.
