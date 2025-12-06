@@ -10,6 +10,10 @@ Using this system can provide people with these unknown information.
 Link to p5js: https://editor.p5js.org/yj2082/full/CUheQmfX3
 Link to Arduino: https://github.com/yongjejeon/Detection-Ardunio-p5js
 
+<!-- wp:video {"id":39635} -->
+<figure class="wp-block-video"><video controls src="https://intro.nyuadim.com/wp-content/uploads/2025/12/demo.mp4"></video></figure>
+<!-- /wp:video -->
+
 **How this was made(Arduino Explanation)**
 
 This system uses 2 Infrared distance sensors and 1 neo pixel ring. 
