@@ -137,43 +137,45 @@ the key is the number of people and the value is the image address. Im proud of 
 Without it my project would have been a detection system, which is cool by itself, but there are nothing to show or present in the showcase other than showing how it can detect yoshi. 
 However, this adds a layer of exitement into my project and a motivation for users to test my project more than once to find out which meme comes out next.
 
-let gifGroups = {
-  0: [
+<!-- wp:code -->
+<pre class="wp-block-code"><code>let gifGroups = {
+  0: &#91;
     "https://media.tenor.com/hrisiYKNn6UAAAAj/you-may-now-enter-kourtlyn-wiggins.gif",
     "https://media1.tenor.com/m/IZF4HViktvgAAAAd/abbott-elementary-come-on-in.gif",
     "https://media1.tenor.com/m/ZGJod50ebXIAAAAd/you-want-to-come-in-invitation.gif"
   ],
-  1: [
+  1: &#91;
     "https://media.tenor.com/eIoZmG3L4fYAAAAi/yoshi-yoshi-tv.gif", 
     "https://media1.tenor.com/m/lANYAosZI4AAAAAd/yoshi-mario.gif" 
   ],
-  2: [
+  2: &#91;
     "https://media1.tenor.com/m/8Mt2eEPPSg4AAAAd/happy-birthday-dance.gif"  
   ],
-  3: [
+  3: &#91;
     "https://media1.tenor.com/m/cMvelryh5BAAAAAd/car.gif",
     "https://media1.tenor.com/m/ovq2B-ML6I4AAAAd/guys-hugging.gif"
   ],
-  4: [
+  4: &#91;
     "https://media1.tenor.com/m/ROTEC3I3vkQAAAAd/despicable-me.gif",
     "https://media1.tenor.com/m/onl3-G1xIGEAAAAd/walk-cross.gif"
   ],
-  5: [
+  5: &#91;
     "https://media1.tenor.com/m/K3shTb7Ow-MAAAAd/johnny-depp-movie.gif",
     "https://media1.tenor.com/m/iLYNgJj42gEAAAAd/dwight-the-office.gif",
     "https://media1.tenor.com/m/ywI3ImfzsvYAAAAd/nicolas-cage-who-are-you-people.gif",
     "https://media1.tenor.com/m/ZBuCuZ4Ms-oAAAAd/where-did-all-of-these-people-come-from-patrick.gif"
   ],
-  6: [
+  6: &#91;
     "https://media1.tenor.com/m/27Atub3mjoMAAAAd/jordan-stop-it.gif"
   ],
-  7: [ 
+  7: &#91; 
     "https://media1.tenor.com/m/fTXGp5PtzscAAAAd/yoshi-luigi.gif"
   ],
-  8: [ // 8 or more
+  8: &#91; // 8 or more
     "https://media.tenor.com/uaqJICjtx4QAAAAM/that%27s-it-enough.gif"
   ]
-};
+};</code></pre>
+<!-- /wp:code -->
 
 For the final project display, I created a small door way to test this system in action. Using laser cutting printers 
 I cut out a door way large enough for my yoshi doll to walk through. I also used 3D printers to print out 2 things: 
