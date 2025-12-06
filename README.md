@@ -1,4 +1,5 @@
-nspired from parking lot detection system, my project is a small re-creation of that as well as a mix of some fun elements to entertain users. 
+**Reflection**
+Inspired from parking lot detection system, my project is a small re-creation of that as well as a mix of some fun elements to entertain users. 
 The idea is simple: a system that detects if a room is occupied or not as well as a way of showing the number of people in the room. 
 This system can be used in the Bahara rooms. These rooms have no windows and there is no ptracical way of checking if the room is in use without acutally opening the doors.
 Hence, the secuirty working in our campus has to periodically check if there are any people in the room, as well as possible accidents. 
@@ -6,7 +7,7 @@ Using this system can provide people with these unknown information.
 Link to p5js: https://editor.p5js.org/yj2082/full/CUheQmfX3
 Link to Arduino: https://github.com/yongjejeon/Detection-Ardunio-p5js
 
-How this was made(Arduino Explanation):
+**How this was made(Arduino Explanation)**
 This system uses 2 Infrared distance sensors and 1 neo pixel ring. 
 The 2 distance sensors are placed side by side to check if the person either entered the room or exited the room. If sensor 1 detects first before sensor 2, 
 then it means that the person entered the room and vice versa. There is more logic in double checking if the detection is really true or not. For example, 
@@ -93,7 +94,7 @@ Arduino sends 2 information: the number of people and if its IN or OUT.
       Serial.print(',');
       Serial.println(lastEvent);
 
-How this was made (P5js)
+**How this was made (P5js)**
 
 There is two transactions between p5js and arduino. p5js receives count and if a person enters or not.
 
@@ -179,8 +180,8 @@ a case for the Infrared sensors and a case for the arduino board. I made these m
 Since these sensors were not from the  ardunio kit, I had to solder wires to the sensors as well as for the neo pixels. 
 Thankfully, I was able to get used to soldering towards the end.
 
-Usage of AI
-I didnt know how to add memes with image address, so I received help from AI when displaying the memes. 
+**Usage of AI**
+I received help from AI when displaying the memes. 
 
 function showGifForCount(count) {
   // Remove previous gif element if any
@@ -194,7 +195,7 @@ function showGifForCount(count) {
 
 The memes were not made by me. They were all saved from a website called tenor.com.
 
-Future Improvement
+**Future Improvement**
 One major improvement is the cable management. In the current prototype, the wiring between the sensors, microcontroller, 
 and LED ring is exposed, which makes the setup look unfinished and less polished. A future version could incorporate a more 
 integrated system and internal routing channels to hide the wires and create a cleaner presentation.
